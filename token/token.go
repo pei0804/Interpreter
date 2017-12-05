@@ -9,7 +9,7 @@ const (
 	INT   = "INT"
 
 	// Oprators
-	ASSIGN = "ASSIGN"
+	ASSIGN = "="
 	PLUS   = "+"
 
 	// Delimiters
