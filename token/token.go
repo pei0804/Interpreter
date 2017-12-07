@@ -15,6 +15,24 @@ const (
 	ASSIGN = "="
 	// PLUS ＋演算子
 	PLUS = "+"
+	// MINUS -演算子
+	MINUS = "-"
+	// BANG !演算子
+	BANG = "!"
+	// ASTERISK *演算子
+	ASTERISK = "*"
+	// SLASH /演算子
+	SLASH = "/"
+
+	// EQ == 比較演算子
+	EQ = "=="
+	//NOT_EQ a != 比較演算子
+	NOT_EQ = "!=" // nolint
+
+	// LT < 比較演算子
+	LT = "<"
+	// GT > 比較演算子
+	GT = ">"
 
 	// COMMA コンマ
 	COMMA = ","
@@ -34,10 +52,20 @@ const (
 	FUNCTION = "FUNCTION"
 	// LET 変数宣言
 	LET = "LET"
+	// TRUE 真
+	TRUE = "TRUE"
+	// FALSE 偽
+	FALSE = "FALSE"
+	// IF if文
+	IF = "IF"
+	// ELSE else文
+	ELSE = "ELSE"
+	// RETURN return
+	RETURN = "RETURN"
 )
 
 // TokenType 文字列 Asciiのみ対応想定
-type TokenType string
+type TokenType string // nolint
 
 // Token 文字列情報
 type Token struct {
@@ -46,8 +74,13 @@ type Token struct {
 }
 
 var keywords = map[string]TokenType{
-	"fn":  FUNCTION,
-	"let": LET,
+	"fn":     FUNCTION,
+	"let":    LET,
+	"true":   TRUE,
+	"false":  FALSE,
+	"if":     IF,
+	"else":   ELSE,
+	"return": RETURN,
 }
 
 // LookupIdent 特別な意味をもった文字列かチェックする
