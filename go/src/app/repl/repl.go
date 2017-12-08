@@ -1,12 +1,11 @@
 package repl
 
 import (
+	"app/lexer"
+	"app/token"
 	"bufio"
 	"fmt"
 	"io"
-
-	"github.com/pei0804/interpreter/lexer"
-	"github.com/pei0804/interpreter/token"
 )
 
 const PROMPT = ">> "

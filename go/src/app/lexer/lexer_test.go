@@ -1,10 +1,9 @@
 package lexer
 
 import (
+	"app/token"
 	"log"
 	"testing"
-
-	"github.com/pei0804/interpreter/token"
 )
 
 func TestNextToken(t *testing.T) {

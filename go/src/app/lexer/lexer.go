@@ -5,9 +5,8 @@ package lexer
 // 様々な文字列に対応する場合は、rune型を使う必要がある
 
 import (
+	"app/token"
 	"fmt"
-
-	"github.com/pei0804/interpreter/token"
 )
 
 // Lexer 文字列を解析し、トークン解釈する

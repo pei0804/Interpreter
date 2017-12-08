@@ -1,11 +1,10 @@
 package main
 
 import (
+	"app/repl"
 	"fmt"
 	"os"
 	"os/user"
-
-	"github.com/pei0804/interpreter/repl"
 )
 
 func main() {
