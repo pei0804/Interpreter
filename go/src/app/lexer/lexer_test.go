@@ -2,7 +2,6 @@ package lexer
 
 import (
 	"app/token"
-	"log"
 	"testing"
 )
 
@@ -111,13 +110,10 @@ if (5 < 10) {
 
 	for i, tt := range tests {
 		tok := l.NextToken()
-		log.Printf("Literal: %s Type: %s", tok.Literal, tok.Type)
-
 		if tok.Type != tt.expectedType {
 			t.Fatalf("tests[%d] - tokentype wrong. expected=%q, got=%q",
 				i, tt.expectedType, tok.Type)
 		}
-
 		if tok.Literal != tt.expectedLiteral {
 			t.Fatalf("tests[%d] - literal wrong. expected=%q, got=%q",
 				i, tt.expectedLiteral, tok.Literal)
